@@ -15,7 +15,6 @@ export function Home() {
             <div className="text-3">
               And I'm a <span className="typing"></span>
             </div>
-            <a href="#">Hire me</a>
           </div>
           <div className="image-wrapper">
             <img src={profile} alt="Profile" />
