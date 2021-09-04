@@ -1,19 +1,27 @@
 import React from "react";
-import "./styles.css";
+import { Effects } from "./Effects/Effects";
+import "./home.css";
+import profile from "../../assets/home_img.jpg";
 
 export function Home() {
   return (
-    <section className="home" id="home">
-      <div className="maxWidth">
-        <div className="home-content">
-          <div className="text-1">Hello, my name is</div>
-          <div className="text-2">Prakash Shahi</div>
-          <div className="text-3">
-            And I'm a <span className="typing"></span>
+    <>
+      <Effects />
+      <section className="home" id="home">
+        <div className="maxWidth">
+          <div className="home-content">
+            <div className="text-1">Hello, my name is</div>
+            <div className="text-2">Juan Felipe</div>
+            <div className="text-3">
+              And I'm a <span className="typing"></span>
+            </div>
+            <a href="#">Hire me</a>
           </div>
-          <a href="#">Hire me</a>
+          <div className="image-wrapper">
+            <img src={profile} alt="Profile" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
