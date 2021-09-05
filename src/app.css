@@ -31,10 +31,16 @@ section {
   padding: 100px 0;
 }
 .max-width {
-  max-width: 1300px;
+  max-width: 1500px;
   padding: 0 80px;
   margin: auto;
 }
+
+.teams {
+  color: #fff;
+  background: #111;
+}
+
 .about,
 .services,
 .skills,
