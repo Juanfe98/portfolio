@@ -36,9 +36,10 @@ section {
   margin: auto;
 }
 
-.teams {
+.teams,
+.timeline-section {
   color: #fff;
-  background: #111;
+  background-color: #24292d;
 }
 
 .about,
@@ -67,14 +68,14 @@ section .title {
   padding-bottom: 20px;
   font-family: "Ubuntu", sans-serif;
 }
-section .title::before {
+.white-section .title::before {
   content: "";
   position: absolute;
   bottom: 0px;
   left: 50%;
   width: 180px;
   height: 3px;
-  background: #111;
+  background: #000;
   transform: translateX(-50%);
 }
 section .title::after {

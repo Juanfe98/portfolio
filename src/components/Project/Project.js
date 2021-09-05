@@ -6,7 +6,7 @@ export function Project() {
   return (
     <section className="teams" id="teams">
       <div className="max-width">
-        <h2 className="title">My teams</h2>
+        <h2 className="title">My Projects</h2>
         <div className="carousel cards-container">
           <div className="card">
             <div className="box">
