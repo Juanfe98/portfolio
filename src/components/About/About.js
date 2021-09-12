@@ -6,8 +6,8 @@ export function About() {
     <section className="about">
       <div className="maxWidth">
         <h2 className="title">About me</h2>
-        <div class="about-content">
-          <div class="column left">
+        <div className="about-content">
+          <div className="column left">
             <img src={profile} alt="Face" />
           </div>
           <div className="column right">
