@@ -1,7 +1,11 @@
 import React from "react";
 import Typed from "typed.js";
 
-export const TypingAnimation = ({ phrases = [] }) => {
+export const TypingAnimation = ({
+  phrases = [],
+  typeSpeed = 100,
+  backSpeed = 100,
+}) => {
   // Create reference to store the DOM element containing the animation
   const el = React.useRef(null);
   // Create reference to store the Typed instance itself
@@ -10,8 +14,8 @@ export const TypingAnimation = ({ phrases = [] }) => {
   React.useEffect(() => {
     const options = {
       strings: phrases,
-      typeSpeed: 120,
-      backSpeed: 120,
+      typeSpeed: typeSpeed,
+      backSpeed: backSpeed,
       loop: true,
       loopCount: Infinity,
     };

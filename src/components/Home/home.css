@@ -6,7 +6,6 @@
 /* home section styling */
 .home {
   display: flex;
-  height: 100vh;
   color: #000000;
   min-height: 500px;
   background-size: cover;
@@ -48,4 +47,34 @@
 .image-wrapper img {
   max-width: 100%;
   border-radius: 50%;
+}
+
+@media (max-width: 1150px) {
+  .image-wrapper {
+    width: 300px;
+  }
+  .home .home-content .text-1 {
+    font-size: 23px;
+  }
+  .home .home-content .text-2 {
+    font-size: 65px;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .image-wrapper {
+    width: 0;
+  }
+  .home .home-content .text-1 {
+    font-size: 23px;
+  }
+  .home .home-content .text-2 {
+    font-size: 65px;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
 }
