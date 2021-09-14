@@ -103,35 +103,39 @@ section .title::after {
   }
 }
 @media (max-width: 947px) {
-  .menu-btn {
+  .menuBtn {
     display: block;
-    z-index: 999;
-  }
-  .menu-btn i.active:before {
-    content: "\f00d";
+    z-index: 11;
   }
   .navbar .menu {
     position: fixed;
     height: 100vh;
     width: 100%;
-    left: -100%;
     top: 0;
-    background: #111;
+    left: -100%;
+    background-color: #000000;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 100px;
     transition: all 0.3s ease;
   }
+
   .navbar .menu.active {
     left: 0;
   }
+
   .navbar .menu li {
     display: block;
   }
+
   .navbar .menu li a {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
   }
+  .navbar .menu li a:hover {
+    color: crimson;
+  }
+
   .home .home-content .text-2 {
     font-size: 70px;
   }

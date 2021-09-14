@@ -38,3 +38,17 @@ a {
   font-size: 18px;
   font-weight: 500;
 }
+
+/* menu btn styling */
+.menuBtn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .menuBtn i.active:before {
+    content: "\f00d";
+  }
+}
