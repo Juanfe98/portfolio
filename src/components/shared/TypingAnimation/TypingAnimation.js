@@ -33,5 +33,9 @@ export const TypingAnimation = ({
     };
   }, []);
 
-  return <span ref={el} />;
+  return (
+    <div style={{ width: '250px'}}>
+      <span ref={el} />
+    </div>
+  )
 };

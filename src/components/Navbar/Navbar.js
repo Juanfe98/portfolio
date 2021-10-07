@@ -1,15 +1,34 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import "./styles.css";
 
 export function Navbar() {
   const menuRef = useRef(null);
+  const oldScrollRef = useRef(0);
+  const navbarRef = useRef(null);
+  
+  useEffect( () => {
+    window.addEventListener("scroll", hideNavbarOnScroll, false);
+    return () => window.removeEventListener("scroll", hideNavbarOnScroll);
+  },[])
+  
+  const hideNavbarOnScroll = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if(scrollTop > oldScrollRef.current){
+      navbarRef.current.classList.add("hideNavbar");
+      navbarRef.current.classList.remove("showNavbar");
+    }else{
+      navbarRef.current.classList.remove("hideNavbar");
+      navbarRef.current.classList.add("showNavbar");
+    }
+    oldScrollRef.current = scrollTop;
+  };
+
   const showMenu = () => {
-    console.log(menuRef.current.classList);
     menuRef.current.classList.toggle("active");
   };
+  
   return (
-    <nav className="navbar">
-      <div className="maxWidth">
+    <nav className="navbar" ref={navbarRef}>
         <div className="logo">
           <a href="#">
             Port<span>folio</span>
@@ -38,7 +57,6 @@ export function Navbar() {
         <div className="menuBtn" onClick={() => showMenu()}>
           <i className="fas fa-bars"> </i>
         </div>
-      </div>
     </nav>
   );
 }

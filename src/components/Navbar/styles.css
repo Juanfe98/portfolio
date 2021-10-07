@@ -9,19 +9,23 @@ a {
   z-index: 10;
   background-color: crimson;
   font-family: "ubuntu", sans-serif;
-}
-
-.maxWidth {
-  max-width: 1300px;
-  padding: 0 80px;
-  margin: auto;
-}
-
-.navbar .maxWidth {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  transition: all .6s ease;
 }
+
+.hideNavbar {
+  transform: translateY(-100px) scale(0.9) rotateX(180deg);
+  opacity: 0;
+}
+
+.showNavbar {
+  transform: translateY(0px) scale(1) rotateX(0);
+  opacity: 1;
+}
+
+
 .navbar .logo a {
   color: #ffffff;
   font-size: 35px;
@@ -50,5 +54,9 @@ a {
 @media (max-width: 991px) {
   .menuBtn i.active:before {
     content: "\f00d";
+  }
+
+  .navbar {
+    justify-content: space-between;
   }
 }
