@@ -6,6 +6,9 @@ import { TypingAnimation } from "../shared/TypingAnimation/TypingAnimation";
 
 export function Home() {
   const typingPhrases = ["Web Developer", "Mobile Developer", "Freelancer"];
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
   return (
     <>
       <Effects />
@@ -23,6 +26,9 @@ export function Home() {
           </div>
         </div>
       </section>
+      <div className="goTopBtn" onClick={scrollToTop}>
+        <i className="fas fa-angle-up"> </i>
+      </div>
     </>
   );
 }
